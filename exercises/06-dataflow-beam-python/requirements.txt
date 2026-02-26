@@ -1,0 +1,8 @@
+requirements.txt for exercises/06-dataflow-beam-python
+
+Install with:
+    pip install -r requirements.txt
+
+---
+
+apache-beam[gcp]>=2.54.0
