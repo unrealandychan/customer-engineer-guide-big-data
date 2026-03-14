@@ -45,6 +45,7 @@ project-g/
 ├── bq-course/                          ← 6-part deep dive into BigQuery
 ├── dataproc-course/                    ← 6-part deep dive into Dataproc
 ├── dataflow-beam-course/               ← 6-part deep dive into Dataflow/Beam
+├── networking-course/                  ← NEW: 6-part deep dive into GCP Networking for Data Engineers
 ├── exercises/
 │   ├── 01-bigquery-python/             ← BQ Python client (7 exercises)
 │   ├── 02-bigquery-go/                 ← BQ Go client (2 exercises)
@@ -101,6 +102,7 @@ project-g/
 | [`bq-course/`](bq-course/README.md) | 6-part deep dive into BigQuery: Storage, Schema, Querying, Partitioning/Clustering, Pricing/Ops | ⭐⭐⭐ Core Tech |
 | [`dataproc-course/`](dataproc-course/README.md) | 6-part deep dive into Dataproc: Spark, Architecture, Cluster Management, PySpark, Optimization | ⭐⭐⭐ Core Tech |
 | [`dataflow-beam-course/`](dataflow-beam-course/README.md) | 6-part deep dive into Dataflow/Beam: Concepts, Transforms, Streaming/Windowing, Python Pipelines, Ops | ⭐⭐⭐ Core Tech |
+| [`networking-course/`](networking-course/README.md) | **NEW** 6-part deep dive into GCP Networking: VPCs, Hybrid Connectivity, Private Google Access, VPC-SC | ⭐⭐ Architecture |
 
 ### 🤝 Soft Skills Practice Lab (`soft-skills/`)
 
@@ -213,43 +215,44 @@ Full responses with scripts → [`03-objection-handling.md`](docs/03-objection-h
 
 ## 🏋️ Practice Checklist
 
-Work through these before the interview:
+Completed in preparation for Round A — keep reviewing before Rounds B, C, D:
 
-- [ ] Explain BigQuery in 30 seconds (elevator pitch) and 3 minutes (whiteboard)
-- [ ] Explain Dataproc and the "Dataproc vs Dataflow vs BigQuery" trade-off
-- [ ] Design a streaming pipeline end-to-end out loud (Q1 in `04-whiteboard-questions.md`)
-- [ ] Design a batch ETL pipeline end-to-end out loud (Q2 in `04-whiteboard-questions.md`)
-- [ ] Handle all 5 objections in `03-objection-handling.md` out loud
-- [ ] Articulate BigQuery optimization strategy (top 4 levers)
-- [ ] Articulate Dataproc cost optimization strategy (top 3 levers)
-- [ ] Run a 45-min mock interview using Q1 or Q5 from `04-whiteboard-questions.md`
-- [ ] Have 3 STAR format stories ready (system design win, cost reduction, debugging)
-- [ ] Prepare 5 smart discovery questions you'd ask a new client
-- [ ] **NEW** Explain BigQuery Editions (Standard vs Enterprise vs Enterprise Plus vs On-Demand)
-- [ ] **NEW** Explain Global Queries — when and why a customer needs it
-- [ ] **NEW** Explain `AI.GENERATE`, `AI.EMBED`, `AI.SIMILARITY` in plain English
-- [ ] **NEW** Describe Dremel's two innovations (columnar nested storage + multi-level execution tree)
-- [ ] **NEW** Explain all 6 foundational Google papers with 1 soundbite each (see `10-google-whitepaper-study-guide.md`)
-- [ ] **NEW** Answer: "Why does BigQuery charge by bytes scanned, not compute time?"
-- [ ] **NEW** Run exercises in `09-advanced-bigquery-ai/` (AI functions + Dremel concepts)
-- [ ] **NEW** Review BigQuery migration strategies and schema translation (`13-bigquery-migration.md`)
-- [ ] **NEW** Understand Data Governance with Dataplex and Data Catalog (`14-data-governance.md`)
-- [ ] **NEW** Prepare competitive positioning against Snowflake, Databricks, and Redshift (`15-competitive-intelligence.md`)
-- [ ] **NEW** Architect an ELT pipeline using Datastream, Composer, and BigQuery (`16-ingestion-and-orchestration.md`)
-- [ ] **NEW** Explain the value of Looker's Semantic Layer and In-Database Architecture (`17-looker-and-bi.md`)
-- [ ] **NEW** Position AlloyDB vs Aurora and explain Spanner's global consistency (`18-alloydb-and-spanner.md`)
-- [ ] **NEW** Walk through the end-to-end MLOps lifecycle from BQML to Vertex AI (`19-vertex-ai-bqml-mlops.md`)
-- [ ] **NEW** Complete the 6-part BigQuery deep dive course (`bq-course/`)
-- [ ] **NEW** Complete the 6-part Dataproc deep dive course (`dataproc-course/`)
-- [ ] **NEW** Complete the 6-part Dataflow/Beam deep dive course (`dataflow-beam-course/`)
+- [x] Explain BigQuery in 30 seconds (elevator pitch) and 3 minutes (whiteboard)
+- [x] Explain Dataproc and the "Dataproc vs Dataflow vs BigQuery" trade-off
+- [x] Design a streaming pipeline end-to-end out loud (Q1 in `04-whiteboard-questions.md`)
+- [x] Design a batch ETL pipeline end-to-end out loud (Q2 in `04-whiteboard-questions.md`)
+- [x] Handle all 5 objections in `03-objection-handling.md` out loud
+- [x] Articulate BigQuery optimization strategy (top 4 levers)
+- [x] Articulate Dataproc cost optimization strategy (top 3 levers)
+- [x] Run a 45-min mock interview using Q1 or Q5 from `04-whiteboard-questions.md`
+- [x] Have 3 STAR format stories ready (system design win, cost reduction, debugging)
+- [x] Prepare 5 smart discovery questions you'd ask a new client
+- [x] Explain BigQuery Editions (Standard vs Enterprise vs Enterprise Plus vs On-Demand)
+- [x] Explain Global Queries — when and why a customer needs it
+- [x] Explain `AI.GENERATE`, `AI.EMBED`, `AI.SIMILARITY` in plain English
+- [x] Describe Dremel's two innovations (columnar nested storage + multi-level execution tree)
+- [x] Explain all 6 foundational Google papers with 1 soundbite each (see `10-google-whitepaper-study-guide.md`)
+- [x] Answer: "Why does BigQuery charge by bytes scanned, not compute time?"
+- [x] Run exercises in `09-advanced-bigquery-ai/` (AI functions + Dremel concepts)
+- [x] Review BigQuery migration strategies and schema translation (`13-bigquery-migration.md`)
+- [x] Understand Data Governance with Dataplex and Data Catalog (`14-data-governance.md`)
+- [x] Prepare competitive positioning against Snowflake, Databricks, and Redshift (`15-competitive-intelligence.md`)
+- [x] Architect an ELT pipeline using Datastream, Composer, and BigQuery (`16-ingestion-and-orchestration.md`)
+- [x] Explain the value of Looker's Semantic Layer and In-Database Architecture (`17-looker-and-bi.md`)
+- [x] Position AlloyDB vs Aurora and explain Spanner's global consistency (`18-alloydb-and-spanner.md`)
+- [x] Walk through the end-to-end MLOps lifecycle from BQML to Vertex AI (`19-vertex-ai-bqml-mlops.md`)
+- [x] Complete the 6-part BigQuery deep dive course (`bq-course/`)
+- [x] Complete the 6-part Dataproc deep dive course (`dataproc-course/`)
+- [x] Complete the 6-part Dataflow/Beam deep dive course (`dataflow-beam-course/`)
+- [x] Complete the 6-part GCP Networking deep dive course (`networking-course/`)
 
 ### Soft Skills
-- [ ] Handle all 15 pushback scenarios in `soft-skills/01-pushback-handling.md` out loud using VERA
-- [ ] Run a full 30-minute mock discovery call using Script 1 in `soft-skills/06-roleplay-scripts.md`
-- [ ] Practice the "Pause, Breathe, Frame" technique on 3 questions you find hard
-- [ ] Apply Pyramid Principle to every answer in a mock session (bottom-line up first)
-- [ ] Identify which persona archetype is in the room and adapt — drill with `soft-skills/04-difficult-personas.md`
-- [ ] Prepare a 30-second ELI5 answer for: BigQuery, Dataproc, Pub/Sub, Dataflow
+- [x] Handle all 15 pushback scenarios in `soft-skills/01-pushback-handling.md` out loud using VERA
+- [x] Run a full 30-minute mock discovery call using Script 1 in `soft-skills/06-roleplay-scripts.md`
+- [x] Practice the "Pause, Breathe, Frame" technique on 3 questions you find hard
+- [x] Apply Pyramid Principle to every answer in a mock session (bottom-line up first)
+- [x] Identify which persona archetype is in the room and adapt — drill with `soft-skills/04-difficult-personas.md`
+- [x] Prepare a 30-second ELI5 answer for: BigQuery, Dataproc, Pub/Sub, Dataflow
 
 ---
 
@@ -300,4 +303,4 @@ Interview Day   → Review cheat sheet + rest
 
 ---
 
-*Prepared: February 2026 | Role: Google Cloud Pre-Sales Engineer | 19 docs · 9 exercise categories · 3 deep dive courses · 59+ files · 7 soft-skills guides*
+*Updated: March 12, 2026 | Role: Google Cloud Pre-Sales Engineer | Round A: Passed ✅ | Rounds B, C, D: Upcoming | 19 docs · 9 exercise categories · 4 deep dive courses · 66+ files · 7 soft-skills guides*
